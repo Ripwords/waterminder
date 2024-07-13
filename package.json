@@ -1,14 +1,16 @@
 {
-  "publisher": "ripwords",
+  "publisher": "Ripwords",
   "name": "waterminder",
   "displayName": "Waterminder",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "repository": "https://github.com/Ripwords/waterminder",
   "private": true,
   "categories": [
     "Other"
   ],
   "main": "./dist/extension.cjs",
+  "icon": "assets/icon.png",
   "engines": {
     "vscode": "^1.89.0"
   },
@@ -16,12 +18,7 @@
     "onStartupFinished"
   ],
   "contributes": {
-    "commands": [
-      {
-        "command": "waterminder.helloWorld",
-        "title": "Hello World"
-      }
-    ],
+    "commands": [],
     "configuration": {
       "title": "Waterminder",
       "properties": {
@@ -51,5 +48,5 @@
     "tsup": "^8.0.2",
     "typescript": "^5.4.5"
   },
-  "packageManager": "bun@1.1.18"
+  "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a"
 }
