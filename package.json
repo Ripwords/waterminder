@@ -39,7 +39,7 @@
     "build": "tsup --env.NODE_ENV production --treeshake",
     "dev": "tsup --watch ./src --env.NODE_ENV development",
     "typecheck": "tsc --noEmit",
-    "vscode:prepublish": "pnpm run build"
+    "vscode:prepublish": "npm run build"
   },
   "devDependencies": {
     "@types/node": "18.x",
