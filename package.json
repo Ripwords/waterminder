@@ -1,0 +1,55 @@
+{
+  "publisher": "ripwords",
+  "name": "waterminder",
+  "displayName": "Waterminder",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/extension.cjs",
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "waterminder.helloWorld",
+        "title": "Hello World"
+      }
+    ],
+    "configuration": {
+      "title": "Waterminder",
+      "properties": {
+        "waterminder.message": {
+          "type": "string",
+          "default": "Waterminder: Drink some water!",
+          "description": "The message to show in the notification"
+        },
+        "waterminder.interval": {
+          "type": "number",
+          "default": 15,
+          "description": "The interval in minutes to show the notification"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsup --env.NODE_ENV production --treeshake",
+    "dev": "tsup --watch ./src --env.NODE_ENV development",
+    "typecheck": "tsc --noEmit",
+    "vscode:prepublish": "pnpm run build"
+  },
+  "devDependencies": {
+    "@types/node": "18.x",
+    "@types/vscode": "^1.89.0",
+    "reactive-vscode": "^0.2.0-beta.3",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  },
+  "packageManager": "bun@1.1.18"
+}
