@@ -10,9 +10,7 @@ export = defineExtension(() => {
     window.showInformationMessage(message.value)
   }
 
-  const intervalId = ref<NodeJS.Timeout | null>(
-    setInterval(callback, interval.value * 1000 * 60)
-  )
+  const intervalId = ref<NodeJS.Timeout | null>()
 
   watchEffect(() => {
     if (intervalId.value) {
