@@ -1,5 +1,7 @@
 # Waterminder
 
+[![Deploy Extension](https://github.com/Ripwords/waterminder/actions/workflows/publish.yml/badge.svg)](https://github.com/Ripwords/waterminder/actions/workflows/publish.yml)
+
 [![Version](https://img.shields.io/visual-studio-marketplace/v/ripwords.waterminder)](https://marketplace.visualstudio.com/items?itemName=ripwords.waterminder) ![Installs](https://img.shields.io/visual-studio-marketplace/i/ripwords.waterminder) [![Reactive VSCode](https://img.shields.io/badge/Reactive-VSCode-%23007ACC?style=flat&labelColor=%23229863)](https://kermanx.github.io/reactive-vscode/)
 
 A VS Code extension created with [Reactive VS Code](https://kermanx.github.io/reactive-vscode/).
