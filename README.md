@@ -6,6 +6,12 @@
 
 A VS Code extension created with [Reactive VS Code](https://kermanx.github.io/reactive-vscode/).
 
+## Features
+
+- Reminds you to drink water every 15 minutes by default
+- Customizable reminder interval `waterminder.interval`
+- Customizable reminder message `waterminder.message`
+
 ## Directory Structure
 
 - `package.json` - this is the manifest file in which you declare your extension and command.

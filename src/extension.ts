@@ -3,10 +3,8 @@ import { window } from "vscode"
 import { message, interval } from "./configs"
 
 export = defineExtension(() => {
-  const windowFocused = ref(window.state.active)
-
   const callback = () => {
-    if (windowFocused.value) {
+    if (window.state.focused) {
       window.showInformationMessage(message.value)
     }
   }
