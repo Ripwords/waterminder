@@ -1,13 +1,14 @@
 import { defineExtension, ref, watchEffect } from "reactive-vscode"
 import { window } from "vscode"
 import { message, interval } from "./configs"
-import { logger } from "./utils"
 
 export = defineExtension(() => {
-  logger.info("Extension Activated")
+  const windowFocused = ref(window.state.active)
 
   const callback = () => {
-    window.showInformationMessage(message.value)
+    if (windowFocused.value) {
+      window.showInformationMessage(message.value)
+    }
   }
 
   const intervalId = ref<NodeJS.Timeout | null>()
