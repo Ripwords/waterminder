@@ -1,10 +1,15 @@
 import { defineExtension, ref, watchEffect } from "reactive-vscode"
 import { window } from "vscode"
-import { message, interval } from "./configs"
+import { message, interval, focused } from "./configs"
 
 export = defineExtension(() => {
   const callback = () => {
-    if (window.state.focused) {
+    if (focused.value) {
+      if (window.state.focused) {
+        window.showInformationMessage(message.value)
+      }
+      return
+    } else {
       window.showInformationMessage(message.value)
     }
   }
